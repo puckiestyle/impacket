@@ -773,10 +773,10 @@ def convertPwToLM(password):
     for c in password:
         v = ord(c)
         if v > 0 and v < 255:
-            ret += int.to_bytes(LM_ARRAY_CONVERT[v])
+            ret += int.to_bytes(LM_ARRAY_CONVERT[v], length=1, byteorder="big")
         for val in LM_ARRAY_CONVERT2:
             if val == v:
-                ret += int.to_bytes(val)
+                ret += int.to_bytes(val, length=1, byteorder="big")
     return ret
 
 def NTOWFv1(password, lmhash = '', nthash=''):
