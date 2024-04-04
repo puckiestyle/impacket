@@ -27,7 +27,13 @@ Setup
 
 ```
 git clone https://github.com/ThePorgs/impacket
-pipx install /path/to/impacket
+[pipx install /path/to/impacket]
+└─$ sudo apt install python3.11-venv 
+└─$ python3 -m venv impacket-fork 
+└─$ source ./impacket-fork/bin/activate 
+└─$ git clone https://github.com/ThePorgs/impacket.git
+└─$ cd impacket
+└─$ pip install -r requirements.txt
 ```
 
 Licensing
